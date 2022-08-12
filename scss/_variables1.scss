@@ -1,0 +1,48 @@
+$font-stack: 'Source Sans Pro', sans-serif; 
+$colors:(
+	accentColor:#14a0c7,
+	bgcolor: #fff,
+	_white: #fff,
+	secBgcolor: #2c2f3c,
+	btncolor: #69a300,
+	maincolor:#2c2f3c
+);
+$bgi: url(../img/m-h-day.jpg);
+$containerWidth: 1535px;
+$gradient: linear-gradient(90deg, rgba(101,149,14,1) 35%, rgba(45,91,215,1) 100%);
+
+%defaultBtn {
+	color: #fff;
+	background-color: map-get($colors, btncolor);
+	padding: 10px 40px;
+	font-size: 1.1em;
+	font-weight: 600;
+	border: none;
+	border-radius: 3px;
+}
+%logoStyle{
+	display: flex;
+	p{
+		padding-left:20px;
+		font-weight: 700;
+		font-size: 1.5em;
+		text-align: center;
+	}
+	span{
+		font-size: 0.4em;
+		display: block;
+		font-weight: 400;
+	}
+}
+@mixin linkdefault{
+	color: map-get($colors, _white);
+}
+@mixin mainfont($theme: White) {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 16px;
+	background-color: map-get($colors, bgcolor);
+	color: map-get($colors, maincolor);
+}
+%fontColor {
+	color: map-get($colors, _white);
+}

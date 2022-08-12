@@ -1,0 +1,153 @@
+// Write your styles here
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	@include mainfont(DarkGray);
+}
+header{
+	margin: 0 auto;
+}
+.header{
+	background-image: $bgi;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	border-radius: 0 0 55% 0;
+	min-height: 720px;
+	&-wrap{
+		max-width: $containerWidth;
+		margin: 0 auto;
+		padding: 20px 0 100px 0;
+		div:last-child{
+   			align-items: center;
+			display: flex;
+   			justify-content: space-between;
+   			max-width: 435px;
+   			padding-top: 60px;
+		}
+	}
+	&_heading{
+		font-size: 4em;
+		font-weight: 700;
+		padding: 50px 0;
+		max-width: 550px;
+		font-family: $font-stack;
+		span{
+			background-color: map-get($colors, accentColor);
+		}
+	}
+	&_text{
+		max-width: 550px;
+		line-height: 25px;
+	}
+	&_button{
+		@extend %defaultBtn;
+	}	
+	.login{
+		@include linkdefault;
+	}	
+}
+.landing-logo{
+	@extend %logoStyle;
+}
+.section{
+	margin: 0 auto;
+	max-width: 1120px;
+	padding-bottom: 208px;
+	position: relative;
+	text-align: center;
+	&_text{
+		font-size: 2em;
+		font-weight: 600;
+		padding: 40px;
+		span{
+			background-color:  map-get($colors, accentColor);
+		}
+	}
+	&_card{
+		@extend %fontColor;
+		border-radius: 3px;
+		background-color:  map-get($colors, secBgcolor);
+		display: flex;
+		justify-content: space-between;
+		min-width: 430px;
+		padding: 20px;
+		img{
+			border-radius: 3px;
+			min-width: 417px;
+		}
+		&_wrap{
+			margin: 0 auto;
+		}
+		&+&{
+			margin-top: 10px;
+		}		
+		&_right_container{
+			padding: 72px 80px 30px;
+		}
+		&_heading{
+			
+			font-size: 1.6em;
+			font-weight: 600;
+		}
+		&_text{
+			text-align: justify;
+			line-height: 20px;
+			padding: 42px 0;
+		}
+	}
+	&_link{
+		@include linkdefault;
+	}
+	&_banner{
+		background: $gradient;
+		bottom: 0;
+		bottom: -72px;
+		display: flex;
+		height: 144px;
+		align-items: center;
+		justify-content: space-between;
+		left: -40px;
+		position: absolute;
+		width: 1200px;
+		&_heading{
+			font-family: $font-stack;
+			font-size: 2em;
+			font-weight: bold;
+			padding-bottom: 15px;
+			span{
+				background-color: map-get($colors, accentColor);
+			}
+		}
+		&_text{
+			text-align: start;
+			color: map-get($colors, maincolor);
+			&_wrap{
+				padding: 12px 160px;
+			}
+		}
+		&_button{
+			@extend %defaultBtn;
+			margin-right: 160px;
+		}
+
+	}
+}
+.footer{
+	min-height: 100px;
+	background-color: map-get($colors, secBgcolor);
+	color: map-get($colors, _white);
+	padding-top: 130px;
+	&-wrap{
+		display: flex;
+		justify-content: space-between;
+		margin: 0 auto;
+		max-width: $containerWidth;
+		align-items: center;
+	}
+	&_text{
+		max-width: 290px;
+	}
+}
